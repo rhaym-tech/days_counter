@@ -1,3 +1,6 @@
+# Days Counter
+A simple web app that counts the number of days between two dates, made to count the days until Riot Vanguard lifts the ban on my friend Akram.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
