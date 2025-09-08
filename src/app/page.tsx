@@ -3,14 +3,23 @@ import BaseModal from "@/compontents/BaseModal";
 import { useState, useEffect } from "react";
 
 export default function Home() {
+  const banDurationDays = 120; // 4 months
+  const banDate = new Date(2025, 6, 9); // July is month 6 (0-indexed)
+  const currentDate = new Date();
+
   const [days, setDays] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
+  const getUnbanDate = () => {
+    const unbanDate = new Date(banDate);
+    unbanDate.setDate(banDate.getDate() + banDurationDays);
+
+    return unbanDate;
+  }
+
   const calculateDaysLeft = () => {
-    const targetDate = new Date(2025, 5, 13); // June is month 5 (0-indexed)
-    const currentDate = new Date();
-    const difference = targetDate.getTime() - currentDate.getTime();
-    return Math.max(0, Math.ceil(difference / (1000 * 3600 * 24)));
+    const difference = currentDate.getTime() - banDate.getTime();
+    return banDurationDays - Math.max(0, Math.ceil(difference / (1000 * 3600 * 24)));
   };
 
   useEffect(() => {
@@ -23,7 +32,7 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center text-center">
         <h1 className="text-4xl font-bold">
-          How many days left until <span style={{color: "red"}}>Riot Vanguard</span> lifts the ban on Akram 🎮
+          How many days left until <span style={{color: "red"}}>Riot Vanguard</span> lifts the ban on us 🎮
         </h1>
         
         <div className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text animate-pulse">
@@ -35,7 +44,7 @@ export default function Home() {
             {days > 0 ? "Until Freedom Day!" : "Akram is Unbanned! 🎉"}
           </p>
           <p className="text-sm opacity-75">
-            Unban Date: June 13th, 2025
+            Unban Date: {getUnbanDate().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
         </div>
 

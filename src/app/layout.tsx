@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rito banned Akram :(",
-  description: "Counting days until Riot Spyguard lifts the ban on Akram",
+  title: "Rito banned Rhaym and Akram :(",
+  description: "Counting days until Riot Spyguard lifts the ban on us",
 };
 
 export default function RootLayout({children}: RootLayoutProps) {
