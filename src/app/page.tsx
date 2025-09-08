@@ -59,24 +59,17 @@ export default function Home() {
 
         {showModal && (
           <BaseModal>
-            <h2 className="text-2xl font-bold mb-4">The Ban Saga 🛡️</h2>
+            <h2 className="text-2xl font-bold mb-4">About the ban 🛡️</h2>
             <div className="text-left">
               <p className="mb-4">
-                <span className="font-bold text-red-500">Akram</span>, an <span className="font-bold text-lime-600">Ascendant-tier</span> player, 
-                was using a <span className="underline">skinchanger</span> to enjoy custom cosmetics in his alt account with no limits, it was basically a huge amount of dopamine. 
+                <span className="font-bold text-red-500">Rhaym</span>{" and "}<span className="font-bold text-red-500">Akram</span>, two chill friends who love playing some competitive matches together, found themselves banned for no fucking reason.
               </p>
               <p className="mb-4">
-                During an unrated match which we were playing together, his <span className="text-green-500">superior gameplay</span> against 
-                Bronze opponents led to false <span className="text-red-400">cheating accusations</span>, like using a triggerbot.<br/>
-                Multiple reports triggered a <span className="font-bold">manual Vanguard review</span>.
+                While Rhaym was guilty for having an untrusted driver loaded on his kernel which he didn't even use. Akram was literally innocent and was banned for no reason.
               </p>
               <p className="mb-4">
-                Riot's investigation found the <span className="underline">unauthorized skinchanger</span>, 
-                resulting in:</p>
-                <ul className="list-disc pl-6 mt-2">
-                  <li>🔒 Permanent account suspension</li>
-                  <li>🖥️ 4-month HWID ban (to avoid future false bans)</li>
-                </ul>
+                Riot is a fuckass company and their anti-cheat system is a joke. They don't even have a proper support system to appeal bans. It's just a big mess.
+              </p>
             </div>
             <button
                 onClick={() => setShowModal(false)}
